@@ -5,6 +5,8 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    # If there is already a cart for the session, don't create a new one
+    session[:cart_id] = Cart.create(total_quantity: 0, total_price: 0) unless session[:cart_id].present?
   end
 
   # GET /items/1
@@ -13,10 +15,10 @@ class ItemsController < ApplicationController
   end
 
   def add
-    @cart = Cart.new
+    @cart = Cart.find_by(id: session[:cart_id])
     @item = Item.find_by(id: params[:item_id])
     @item.cart_id = @cart.id
-    @cart.save
+    @item.save && @cart.save
 
     redirect_to items_path
   end
