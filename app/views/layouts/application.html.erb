@@ -4,6 +4,7 @@
     <title>Store</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -12,6 +13,7 @@
 	<li class="nav-item">Home</li> |
 	<li class="nav-item">About</li> |
 	<li class="nav-item">My Cart</li>
+	<li class="nav-item left cart">Drag onto me!</li>
       </ul>
     </div>
     <%= yield %>

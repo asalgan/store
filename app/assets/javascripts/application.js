@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function () {
+    // Use a "clone" helper so the original element stays in place as we drag.
+    $( ".item" ).draggable({
+        helper: "clone"
+    });
+    
+    $( ".cart" ).droppable({
+        activeClass: "droppable",
+        hoverClass: "hover",
+        tolerance: "touch",
+        drop: function( event, ui ) {
+	    var url = ui.draggable.find("a.add").attr("href")
+	    var successFunction = function() {
+		alert("Item added to cart")
+	    };
+	    $.post(url, successFunction)
+	    
+        }
+    });
+});

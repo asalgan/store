@@ -1,17 +1,35 @@
 .container {
-  margin-left: 7%; }
+  margin-left: 7%;
+  margin-top: 3%; }
 
 .item {
   display: inline-block;
+  margin-top: 10px;
   box-shadow: 2px 2px 2px 2px #ccc;
   height: 200px;
-  position: relative; }
+  position: relative;
+  background: white; }
+
+ul.item-list {
+  position: absolute;
+  left: 140px;
+  list-style: none; }
 
 img {
   width: 30%;
   position: absolute;
   left: 10px;
-  top: 20px; }
+  top: 30px; }
+
+.cart {
+  background: #a6f1a6;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  padding-top: 10px; }
+
+.hover {
+  background: lightgreen; }
 
 .col1 {
   width: 75px;

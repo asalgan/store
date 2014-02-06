@@ -15,6 +15,7 @@ $gutter-width: 20px;
     box-shadow: 2px 2px 2px 2px #ccc;
     height: 200px;
     position: relative;
+    background: white;
 }
 
 ul.item-list {
@@ -28,6 +29,18 @@ img {
     position: absolute;
     left: 10px;
     top: 30px;
+}
+
+.cart {
+    background: lighten(lightgreen, 5%);
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.hover {
+    background: lightgreen;
 }
 
 .col1 {
