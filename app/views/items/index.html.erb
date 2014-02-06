@@ -1,5 +1,4 @@
 <div class="container">
-  <div class="container">
     <% @items.each do |item| %>
       <div class="item col4">
         <%= image_tag(item.image) %>
@@ -8,7 +7,7 @@
         	<li>Price: $<%= item.price %>.00</li>
         	<li><%= link_to 'Details', item %></li>
         	<li><%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post' %></li>
-          </ul>
+        </ul>
       </div>
     <% end %>
   </div>

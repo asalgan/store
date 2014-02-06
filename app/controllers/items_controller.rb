@@ -12,15 +12,26 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @cart = Cart.find_by(id: session[:cart_id])
+    @random = Item.all.sample(3)
   end
 
   def add
     @cart = Cart.find_by(id: session[:cart_id])
     @item = Item.find_by(id: params[:item_id])
     @item.cart_id = @cart.id
+
+    if params[:quantity].present?
+      @cart.total_price += @item.price * params[:quantity].to_i
+      @cart.total_quantity += params[:quantity].to_i
+    else
+      @cart.total_price += @item.price
+      @cart.total_quantity += 1
+    end
+
     @item.save && @cart.save
 
-    redirect_to items_path
+    redirect_to cart_path
   end
 
   # GET /items/new

@@ -17,10 +17,13 @@ $gutter-width: 20px;
     position: relative;
 }
 
-ul.item-list {
+ul {
+    list-style: none;
+    
+    &.item-list {
     position: absolute;
     left: 140px;
-    list-style: none;
+    }
 }
 
 img {
@@ -28,6 +31,10 @@ img {
     position: absolute;
     left: 10px;
     top: 30px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
 }
 
 .col1 {
@@ -69,3 +76,71 @@ img {
     width: $col-width * 8;
     margin-right: $gutter-width;
 }
+
+.itempageimage {
+    padding-left: 200px;
+    position: relative;
+}
+
+.itemdetails {
+    float: right;
+    border: 10px solid #e4f3d9;
+    margin-right: 200px;
+    padding: 10px 20px 20px 20px;
+}
+
+.itemname {
+    font-size: 26px;
+    text-align: center
+}
+
+.itemprice {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.itemnumber {
+    float: right
+}
+
+.itemquantity {
+    margin-top: 30px;
+    margin-bottom: 4px;
+}
+
+.itemdescription {
+    margin-top: 50px;
+}
+
+.submitbutton {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    border-radius: 0px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    background-color: #55B4B0;
+    border: none;
+    font-size: 20px;
+
+    &:hover {
+    background-color: darken(#55B4B0, 20%);
+    color: white;
+    cursor: pointer;
+    }
+}
+
+.relateditems {
+    bottom: 10px;
+    position: absolute;
+    list-style: none;
+    display: inline-block
+}
+
+.related-item-list{
+    display: inline-block;
+    padding-left: 100px;
+}
+
+
+
