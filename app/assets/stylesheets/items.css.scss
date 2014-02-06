@@ -1,3 +1,63 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$col-width: 75px;
+$gutter-width: 20px;
+
+.container {
+    margin-left: 7%;
+}
+
+.item {
+    display: inline-block;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    height: 200px;
+    position: relative;
+}
+
+img {
+    width: 30%;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+.col1 {
+    width: $col-width;
+    margin-right: $gutter-width;
+}
+
+.col2 {
+    width: $col-width * 2;
+    margin-right: $gutter-width;
+}
+
+.col3 {
+    width: $col-width * 3;
+    margin-right: $gutter-width;
+}
+
+.col4 {
+    width: $col-width * 4;
+    margin-right: $gutter-width;
+}
+
+.col5 {
+    width: $col-width * 5;
+    margin-right: $gutter-width;
+}
+
+.col6 {
+    width: $col-width * 6;
+    margin-right: $gutter-width;
+}
+
+.col7 {
+    width: $col-width * 7;
+    margin-right: $gutter-width;
+}
+
+.col8 {
+    width: $col-width * 8;
+    margin-right: $gutter-width;
+}

@@ -1,36 +1,16 @@
-<h1>Listing items</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Price</th>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Item number</th>
-      <th>Cart</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <div class="container">
     <% @items.each do |item| %>
-      <tr>
-        <td><%= item.price %></td>
-        <td><%= item.name %></td>
-        <td><%= item.image %></td>
-        <td><%= item.item_number %></td>
-        <td><%= item.cart_id %></td>
-        <td><%= item.description %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post' %></td>
-      </tr>
+      <div class="item col4">
+	<%= item.price %>
+	<%= item.name %>
+	<%= image_tag(item.image) %>
+	<%= item.item_number %>
+	<%= link_to 'Show', item %>
+	<%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post' %>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
+  <br>
 
-<br>
-
-<%= link_to 'New Item', new_item_path %>
+  <%= link_to 'New Item', new_item_path %>
