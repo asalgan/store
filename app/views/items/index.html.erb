@@ -2,12 +2,13 @@
   <div class="container">
     <% @items.each do |item| %>
       <div class="item col4">
-	<%= item.price %>
-	<%= item.name %>
-	<%= image_tag(item.image) %>
-	<%= item.item_number %>
-	<%= link_to 'Show', item %>
-	<%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post' %>
+        <%= image_tag(item.image) %>
+        <ul class="item-list">
+          <li><%= item.name %></li>
+        	<li>Price: $<%= item.price %>.00</li>
+        	<li><%= link_to 'Details', item %></li>
+        	<li><%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post' %></li>
+          </ul>
       </div>
     <% end %>
   </div>
