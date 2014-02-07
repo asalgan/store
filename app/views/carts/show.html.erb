@@ -3,7 +3,9 @@
 		<% @items.each do |item| %>
 			<div class="checkout-item">
 			<%= image_tag(item.image, :class => "checkout-item-image") %>
-		  <h3><%= item.name %></h3>
+			<%= link_to "Remove Item", method: "delete", class: "delete-button" %>
+		  <h3 class="cart-item-name"><%= item.name %></h3>
+		  <h3 class="cart-item-price">$<%= item.price %>.00</h3>
 		  <p class="itemquantity-checkout">Quantity:</p>
     	<%= form_tag '/add' do %>
       <%= select_tag(:quantity, options_for_select(1..20), :class=> "select") %>
@@ -12,7 +14,7 @@
 		  </div>
 		<% end %>
 			
-
+		
 		<h1><%= @cart.total_quantity %></h1>
 		<h1><%= @cart.total_price %></h1>
 	</div>

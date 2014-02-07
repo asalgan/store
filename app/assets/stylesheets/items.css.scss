@@ -145,20 +145,29 @@ p, h3 {
 .checkout-item {
     border: 1px solid gray;
     border-radius: 5px;
-    height: 90px;
+    height: 120px;
     width: 700px;
     margin-top: 20px;
     margin-left: 50%;
 }
 
 h3 {
-    margin-top: -80px;
-    margin-left: 95px;
+    margin-left: 125px; 
+
+    &.cart-item-name {
+        margin-top: -110px;
+    }
+
+    &.cart-item-price {
+        margin-top: -15px;
+        font-size: 16px;
+    
+    }
 }
 
 .checkout-item-image {
-    height: 80px;
-    width: 80px;
+    height: 110px;
+    width: 110px;
     position: relative;
     top: 4px;
     left: 4px;
@@ -167,12 +176,30 @@ h3 {
 }
 
 .itemquantity-checkout {
-    margin-left: 95px;
+    margin-left: 125px;
     display: inline;
+    font-size: 14px;
 }
 
 .select {
-    margin-left: 95px;
+    margin-left: 125px;
     display: inline;
 }
+
+a  {
+    margin-left: 590px;
+    top: 10px;
+    border: 1px solid gray;
+    padding: 5px;
+    text-decoration: none;
+    color: #55B4B0;
+    font-family: 'Lato', sans-serif;
+
+    &:hover {
+        background-color: gray;
+        color: white;
+    }
+}
+
+
 
