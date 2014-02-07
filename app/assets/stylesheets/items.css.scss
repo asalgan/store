@@ -33,7 +33,7 @@ img {
     top: 30px;
 }
 
-p {
+p, h3 {
     font-family: 'Lato', sans-serif;
 }
 
@@ -142,5 +142,37 @@ p {
     padding-left: 100px;
 }
 
+.checkout-item {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 90px;
+    width: 700px;
+    margin-top: 20px;
+    margin-left: 50%;
+}
 
+h3 {
+    margin-top: -80px;
+    margin-left: 95px;
+}
+
+.checkout-item-image {
+    height: 80px;
+    width: 80px;
+    position: relative;
+    top: 4px;
+    left: 4px;
+    border: 1px solid #55B4B0;
+    border-radius: 5px;
+}
+
+.itemquantity-checkout {
+    margin-left: 95px;
+    display: inline;
+}
+
+.select {
+    margin-left: 95px;
+    display: inline;
+}
 

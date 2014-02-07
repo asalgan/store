@@ -1,10 +1,17 @@
 <div class="container">
 	<div class="col6">
 		<% @items.each do |item| %>
-			<div>
-		  <h1><%= item.name %></h1>
+			<div class="checkout-item">
+			<%= image_tag(item.image, :class => "checkout-item-image") %>
+		  <h3><%= item.name %></h3>
+		  <p class="itemquantity-checkout">Quantity:</p>
+    	<%= form_tag '/add' do %>
+      <%= select_tag(:quantity, options_for_select(1..20), :class=> "select") %>
+      <%= hidden_field_tag(:item_id, params[:id]) %>
+      <% end %>
+		  </div>
 		<% end %>
-			</div>
+			
 
 		<h1><%= @cart.total_quantity %></h1>
 		<h1><%= @cart.total_price %></h1>
