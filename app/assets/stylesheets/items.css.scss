@@ -27,6 +27,10 @@ ul {
     }
 }
 
+p, li {
+    font-family: 'Lato', sans-serif;
+}
+
 img {
     width: 30%;
     position: absolute;
@@ -195,18 +199,21 @@ h3 {
     display: inline;
 }
 
-a  {
-    margin-left: 590px;
-    top: 10px;
-    border: 1px solid gray;
-    padding: 5px;
-    text-decoration: none;
-    color: #55B4B0;
-    font-family: 'Lato', sans-serif;
+.item-list li {
+        margin-top: 14px;
 
-    &:hover {
-        background-color: gray;
-        color: white;
+        a {
+            padding-top: 20px;
+            border: 1px solid gray;
+            padding: 5px;
+            text-decoration: none;
+            color: #55B4B0;
+            font-family: 'Lato', sans-serif;
+
+        &:hover {
+            background-color: gray;
+            color: white;
+        }
     }
 }
 

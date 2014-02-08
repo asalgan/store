@@ -4,7 +4,7 @@
         <%= image_tag(item.image) %>
         <ul class="item-list">
           <li><%= item.name %></li>
-        	<li>Price: $<%= item.price %>.00</li>
+        	<li class="itemprice">$<%= item.price %>.00</li>
         	<li><%= link_to 'Details', item %></li>
         	<li><%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post' %></li>
         </ul>
@@ -12,18 +12,3 @@
     <% end %>
   </div>
   <br>
-  <% @items.each do |item| %>
-    <div class="item col4">
-      <%= image_tag(item.image) %>
-      <ul class="item-list">
-        <li><%= item.name %></li>
-        <li>Price: $<%= item.price %>.00</li>
-        <li><%= link_to 'Details', item %></li>
-        <li><%= link_to 'Add to cart', "/add?item_id=#{item.id}", method: 'post', class: "add" %></li>
-      </ul>
-    </div>
-  <% end %>
-</div>
-<br>
-
-<%= link_to 'New Item', new_item_path %>
