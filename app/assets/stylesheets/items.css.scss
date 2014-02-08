@@ -26,13 +26,33 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 
 .nav {
     border-bottom: 1px solid gray;
+    padding-bottom: 10px;
     
-    ul {
+    .navbar {
+        @include columnify(4);
+        @include offset(1);
+        width: 200px;
+        height: 30px;
+        display: inline;
 
-        li {
-        list-style: none;
+        ul {
+
+            li {
+            list-style: none;
+
+            }
         }
     }
+}
+
+.cart {
+    background: lighten(lightgreen, 5%);
+    height: 30px;
+    width: 120px;
+    text-align: center;
+    padding-top: 10px;
+    @include columnify(3);
+    @include offset(3)
 }
 
 ul {
@@ -57,10 +77,12 @@ img {
 
 .cart {
     background: lighten(lightgreen, 5%);
-    height: 40px;
+    height: 30px;
     width: 120px;
     text-align: center;
     padding-top: 10px;
+    @include columnify(4);
+    @include offset(4)
 }
 
 
@@ -70,6 +92,10 @@ img {
         min-width: 150px;
         max-height: 160px;
         max-width: 160px;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 }
 .hover {

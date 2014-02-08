@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Item.destroy_all
+Cart.destroy_all
+Cart.new
 
 Item.create(name: 'Unicorn Meat', image: 'unicornmeat.jpg',price: 9, item_number: 1384377, description: "The highest quality meat, goes great with cheese, super fresh.")
 Item.create(name: 'Baconnaise', image: 'baconnaise.jpg' , price: 15, item_number: 2387234, description: "Mayonnaise, but with bacon!")
@@ -25,6 +27,7 @@ Item.create(name: 'Star Wars Shirt', image: "starwars-shirt.jpeg", price: 22, it
 Item.create(name: 'Tank', image: "tank.jpeg", price: 382, item_number: 8454484, description: "Conquer a small country")
 Item.create(name: 'Tentacles', image: "tentacles.jpg", price: 36, item_number: 3044594, description: "Wearable calamari")
 Item.create(name: 'Uranium', image: "uranium.jpg", price: 6636, item_number: 3983475, description: "Just what Iran wanted")
+
 
 
 
