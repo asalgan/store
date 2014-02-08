@@ -15,6 +15,7 @@ $gutter-width: 20px;
     box-shadow: 2px 2px 2px 2px #ccc;
     height: 200px;
     position: relative;
+    background: white;
 }
 
 ul {
@@ -33,8 +34,16 @@ img {
     top: 30px;
 }
 
-p, h3 {
-    font-family: 'Lato', sans-serif;
+.cart {
+    background: lighten(lightgreen, 5%);
+    height: 40px;
+    width: 120px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.hover {
+    background: lightgreen;
 }
 
 .col1 {
