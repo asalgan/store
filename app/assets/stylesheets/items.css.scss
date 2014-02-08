@@ -1,21 +1,38 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$col-width: 75px;
-$gutter-width: 20px;
+// $col-width: 75px;
+// $gutter-width: 20px;
 
-.container {
-    margin-left: 7%;
-    margin-top: 3%;
+
+$max_width: 960px;
+$gutter_width: 20px;
+$col_count: 12;
+$gutter_count: $col_count - 1;
+$total_gutter_width: $gutter_count * $gutter_width;
+$col_width: ($max_width - $total_gutter_width) / $col_count;
+
+@mixin columnify($num_cols) {
+    width: $col_width * $num_cols + $gutter_width * ($num_cols - 1);
 }
 
-.item {
-    display: inline-block;
-    margin-top: 10px;
-    box-shadow: 2px 2px 2px 2px #ccc;
-    height: 200px;
-    position: relative;
-    background: white;
+@mixin offset($num_cols) {
+    margin-left: ($col_width + $gutter_width) * $num_cols;
+}
+
+.container {
+
+}
+
+.nav {
+    border-bottom: 1px solid gray;
+    
+    ul {
+
+        li {
+        list-style: none;
+        }
+    }
 }
 
 ul {
@@ -46,53 +63,70 @@ img {
     padding-top: 10px;
 }
 
+
+.item {
+    img{
+        min-height: 150px;
+        min-width: 150px;
+        max-height: 160px;
+        max-width: 160px;
+    }
+}
 .hover {
     background: lightgreen;
 }
 
-.col1 {
-    width: $col-width;
-    margin-right: $gutter-width;
-}
+// .col1 {
+//     width: $col-width;
+//     margin-right: $gutter-width;
+// }
 
-.col2 {
-    width: $col-width * 2;
-    margin-right: $gutter-width;
-}
+// .col2 {
+//     width: $col-width * 2;
+//     margin-right: $gutter-width;
+// }
 
-.col3 {
-    width: $col-width * 3;
-    margin-right: $gutter-width;
-}
+// .col3 {
+//     width: $col-width * 3;
+//     margin-right: $gutter-width;
+// }
 
-.col4 {
-    width: $col-width * 4;
-    margin-right: $gutter-width;
-}
+// .col4 {
+//     width: $col-width * 4;
+//     margin-right: $gutter-width;
+// }
 
-.col5 {
-    width: $col-width * 5;
-    margin-right: $gutter-width;
-}
+// .col5 {
+//     width: $col-width * 5;
+//     margin-right: $gutter-width;
+// }
 
-.col6 {
-    width: $col-width * 6;
-    margin-right: $gutter-width;
-}
+// .col6 {
+//     width: $col-width * 6;
+//     margin-right: $gutter-width;
+// }
 
-.col7 {
-    width: $col-width * 7;
-    margin-right: $gutter-width;
-}
+// .col7 {
+//     width: $col-width * 7;
+//     margin-right: $gutter-width;
+// }
 
-.col8 {
-    width: $col-width * 8;
-    margin-right: $gutter-width;
-}
+// .col8 {
+//     width: $col-width * 8;
+//     margin-right: $gutter-width;
+// }
 
 .itempageimage {
-    padding-left: 200px;
+    margin-left: 120px;
     position: relative;
+    
+
+    img {
+        min-width: 400px;
+        min-height: 400px;
+        max-width: 450px;
+        max-height: 450px;
+    }
 }
 
 .itemdetails {
@@ -144,10 +178,10 @@ img {
 }
 
 .relateditems {
-    bottom: 10px;
-    position: absolute;
-    list-style: none;
-    display: inline-block
+    // bottom: 10px;
+    // position: absolute;
+    // list-style: none;
+    // display: inline-block
 }
 
 .related-item-list{

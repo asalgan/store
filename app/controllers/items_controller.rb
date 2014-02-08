@@ -13,7 +13,9 @@ class ItemsController < ApplicationController
   # GET /items/1.json
   def show
     @cart = Cart.find_by(id: session[:cart_id])
-    @random = Item.all.sample(3)
+    @random1 = Item.all.sample.name
+    @random2 = Item.all.sample.name
+    @random3 = Item.all.sample.name
   end
 
   def add
