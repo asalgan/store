@@ -34,11 +34,14 @@
     <% end %>
   </div>
 
-  <div class="relateditems col8">
-    <%= @random1 %>
-    <%= @random2 %>
-    <%= @random3 %>
-  </div>
+  <ul class="relateditems">
+    <li class="relateditem1"><%= @random1.name %>
+    <%= image_tag(@random1.image) %></li>
+    <li class="relateditem2"><%= @random2.name %>
+    <%= image_tag(@random2.image) %></li>
+    <li class="relateditem3"><%= @random3.name %>
+    <%= image_tag(@random3.image) %></li>
+  </ul>
 
 </div>
 
