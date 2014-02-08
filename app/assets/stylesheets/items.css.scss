@@ -5,7 +5,7 @@
 // $gutter-width: 20px;
 
 
-$max_width: 960px;
+$max_width: 1440px;
 $gutter_width: 20px;
 $col_count: 12;
 $gutter_count: $col_count - 1;
@@ -21,9 +21,8 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
 }
 
 .container {
-    left: 0px;
-    @include offset(1);  
-    @include columnify(19); 
+    @include columnify(12); 
+    @include offset(1)
 }
 
 .nav {
@@ -32,30 +31,32 @@ $col_width: ($max_width - $total_gutter_width) / $col_count;
     
     .navbar {
         @include columnify(4);
-        @include offset(1);
-        width: 200px;
         height: 30px;
         display: inline;
         padding-left: 0;
+        @include offset(1);
 
-        ul {
+        li a {
+        text-decoration: none;
+        color: black;
 
-            li {
-            list-style: none;
-
+        &:hover {
+            color: darken(#e4f3d9, 40%);
             }
         }
     }
 }
-
+.about {
+    margin-right: 20px;
+}
 .cart {
     background: lighten(lightgreen, 5%);
     height: 30px;
     width: 120px;
     text-align: center;
     padding-top: 10px;
-    @include columnify(4);
-    @include offset(4);
+    @include columnify(3);
+    @include offset(2);
 
     &.hover {
         border: 1px dashed #666;
@@ -88,7 +89,7 @@ img {
 
 
 .item {
-    @include columnify(4);
+    @include columnify(2.5);
 
     img{
         min-height: 150px;
@@ -151,14 +152,13 @@ img {
     
 
     img {
-        min-width: 400px;
-        min-height: 400px;
-        max-width: 450px;
-        max-height: 450px;
+        max-height: 400px;
+        @include columnify(4);
     }
 }
 
 .itemdetails {
+    @include columnify(4);
     float: right;
     border: 10px solid #e4f3d9;
     margin-right: 200px;
@@ -280,5 +280,138 @@ h3 {
     }
 }
 
+@media screen and (max-width: 1320px) {
+    .container {
+        @include columnify(10); 
+        @include offset(.5);
+    }
 
+    .cart {
+        @include offset(1.5);
+    }
+}
 
+@media screen and (max-width: 980px) {
+    .container {
+        @include columnify(6); 
+        @include offset(1);
+    }
+
+    .cart {
+        @include offset(1);
+        @include columnify(2.5);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        @include columnify(6); 
+        @include offset(.5);
+    }
+
+    .cart {
+        @include offset(.5);
+        @include columnify(2.5);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .container {
+        @include columnify(4); 
+        @include offset(1);
+    }
+
+    .cart {
+        @include offset(0);
+        @include columnify(2.5);
+    }
+
+    .navbar {
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .container {
+        @include columnify(2); 
+        @include offset(1);
+    }
+
+    .cart {
+        @include offset(1);
+        @include columnify(2.5);
+        margin-top: 20px;
+    }
+
+    .nav {
+        @include columnify(5);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .container {
+        @include columnify(2); 
+        @include offset(1);
+    }
+
+    .cart {
+        @include offset(1);
+        @include columnify(2.5);
+        margin-top: 20px;
+    }
+
+    .nav {
+        @include columnify(5);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        @include columnify(2); 
+        @include offset(.5);
+    }
+
+    .cart {
+        @include offset(.5);
+        @include columnify(2.5);
+        margin-top: 20px;
+    }
+
+    .nav {
+        @include columnify(4);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        @include columnify(2); 
+        @include offset(.2);
+    }
+
+    .cart {
+        @include offset(.2);
+        @include columnify(2.5);
+        margin-top: 20px;
+    }
+
+    .nav {
+        @include columnify(4);
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .container {
+        @include columnify(2); 
+        @include offset(0);
+    }
+
+    .cart {
+        @include offset(0);
+        @include columnify(2.5);
+        margin-top: 20px;
+    }
+
+    .nav {
+        @include columnify(4);
+    }
+}
