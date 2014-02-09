@@ -3,7 +3,7 @@
 		<% @items.each do |item| %>
 			<div class="checkout-item">
 			<%= image_tag(item.image, :class => "checkout-item-image") %>
-			<%= link_to "Remove Item", method: "delete", class: "delete-button" %>
+			<%= link_to "Remove", "/remove?id=#{item.id}", method: "post", class: "delete-button" %>
 		  <h3 class="cart-item-name"><%= item.name %></h3>
 		  <h3 class="cart-item-price">$<%= item.price %>.00</h3>
 		  <p class="itemquantity-checkout">Quantity:</p>

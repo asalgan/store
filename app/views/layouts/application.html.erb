@@ -14,7 +14,9 @@
       	<li class="nav-item"><%= link_to "Home", root_path %></li> |
       	<li class="nav-item"><%= link_to "My Cart", cart_path %></li> |
         <li class="nav-item about">About</li>
-      	<li class="nav-item cart">Drag onto me!</li>
+        <% if controller.action_name == 'index' %>
+      	<li class="nav-item cart">Drag onto me to add to cart! (<%= Cart.find(session[:cart_id]).total_quantity %>)</li>
+        <% end %>
       </ul>
     </div>
     <%= yield %>

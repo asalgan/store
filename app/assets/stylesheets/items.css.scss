@@ -147,9 +147,11 @@ img {
 // }
 
 .itempageimage {
-    margin-left: 120px;
+    //margin-left: 120px;
     position: absolute;
-    @include offset(1);
+    top: 100px;
+    left: 20px;
+    //@include offset(1);
     
     img {
         max-height: 400px;
@@ -456,6 +458,13 @@ h3 {
         color: white; 
         }
     }
+}
+
+.delete-button {
+    text-decoration: none;
+    position: absolute;
+    top: 85px;
+    left: 920px;
 }
 
 
