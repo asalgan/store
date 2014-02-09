@@ -244,6 +244,7 @@ img {
 }
 
 .checkout-item {
+    position: relative;
     border: 1px solid gray;
     border-radius: 5px;
     height: 120px;
@@ -463,8 +464,8 @@ h3 {
 .delete-button {
     text-decoration: none;
     position: absolute;
-    top: 85px;
-    left: 920px;
+    top: 10px;
+    left: 620px;
 }
 
 
