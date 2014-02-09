@@ -14,8 +14,12 @@
 		  </div>
 		<% end %>
 			
-		
-		<h1><%= @cart.total_quantity %></h1>
-		<h1><%= @cart.total_price %></h1>
+		<div class="summary">
+      <ul>
+        <li>Quantity: <%= @cart.total_quantity %></li>
+        <li>Total price: $<%= @cart.total_price %>.00</li>
+        <button>Checkout</button>
+      </ul>
+    </div>
 	</div>
 </div>

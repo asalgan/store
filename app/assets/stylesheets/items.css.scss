@@ -438,3 +438,25 @@ h3 {
         @include columnify(4);
     }
 }
+
+.summary {
+    border: 1px grey solid;
+    @include columnify(2);
+    position: absolute;
+    top: 100px;
+    left: 50px;
+
+    button {
+        border: 1px black solid;
+        background: white;
+
+        &:hover {
+        transition: all 200ms ease;
+        background: black;
+        color: white; 
+        }
+    }
+}
+
+
+
